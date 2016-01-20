@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 from os import path
 from glob import glob
 import argparse
@@ -14,6 +15,8 @@ def add_hard_spaces(path_to_tex_files):
     LIST_OF_WORDS += uppercased
 
     files = glob(path.join(path_to_tex_files, '*.tex'))
+    if not files:
+        exit("No .tex files found")
 
     for file in files:
         print("fixing: " + file)

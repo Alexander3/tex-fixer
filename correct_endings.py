@@ -4,9 +4,9 @@ from glob import glob
 import argparse
 
 LIST_OF_WORDS = ["a", "i", "o", "u", "w", "z", "ze", "od", "do", "że", "iż",
-                 "poprzez", "spod", "sponad", "znad", "po", "za", "nad", "pod", "na",
+                 "poprzez", "przez", "spod", "sponad", "znad", "po", "za", "nad", "pod", "na",
                  "oraz", "ale", "lub", "albo", "bądź", "czy", "by", "aby", "jak", "ponieważ", "bo",
-                 "który", "która", "które", "którego", "krótemu", "której", "którym"]
+                 "który", "która", "które", "którego", "któremu", "której", "którym"]
 
 
 def add_hard_spaces(path_to_tex_files):

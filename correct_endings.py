@@ -6,8 +6,11 @@ import argparse
 LIST_OF_WORDS = ["a", "i", "o", "u", "w", "z", "ze", "od", "do", "że", "iż",
                  "poprzez", "przez", "spod", "sponad", "znad", "po", "za", "nad", "pod", "na",
                  "oraz", "ale", "lub", "albo", "bądź", "czy", "by", "aby", "jak", "ponieważ", "bo",
-                 "który", "która", "które", "którego", "któremu", "której", "którym"]
+                 "który", "która", "które", "którego", "któremu", "której", "którym",
+                 "to", "te", "są", "się", "dla", "jest", "być", "lecz", "wraz", "nie", "tak", 
+                 "więc", "niech", "tylko"]
 
+LIST_OF_WORDS = LIST_OF_WORDS + [word + "," for word in LIST_OF_WORDS]
 
 def add_hard_spaces(path_to_tex_files):
     global LIST_OF_WORDS

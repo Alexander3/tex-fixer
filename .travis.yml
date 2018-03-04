@@ -1,6 +1,10 @@
 sudo: false
 language: python
+
+install:
+ - pip install flake8
 python:
   - "3.6"
 script:
+  - flake8
   - python -m unittest --verbose --failfast

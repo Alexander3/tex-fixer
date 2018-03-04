@@ -1,10 +1,9 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
-from os import path
-from glob import glob
 import argparse
-
 import re
+from os.path import join
+from glob import glob
 
 LIST_OF_WORDS = ["a", "i", "o", "u", "w", "z", "ze", "od", "do", "że", "iż",
                  "poprzez", "przez", "spod", "sponad", "znad", "po", "za", "nad", "pod", "na",
@@ -18,7 +17,7 @@ LIST_OF_WORDS += [word.title() for word in LIST_OF_WORDS]
 
 
 def add_hard_spaces(path_to_tex_files):
-    files = glob(path.join(path_to_tex_files, " *.tex"))
+    files = glob(join(path_to_tex_files, "*.tex"))
     if not files:
         exit("No .tex files found")
 

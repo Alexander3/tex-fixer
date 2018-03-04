@@ -1,0 +1,47 @@
+\chapter{Podsumowanie} \label{cha:podsumowanie}
+
+W wyniku prac powstał interfejs do projektu, króry stanowi tylko jedną część całości.
+Uzyskana dokładność jest wystarczająca do testowania całego projektu,
+lecz może się okazać za mała do profesjonalnych zastosowań dla bronioznawców.
+Do otrzymania idealnej precyzji konieczne będzie użycie dokładniejszych kontrolerów, jak np. Razer Hydra\footnote{
+	Kontroler stworzony przez Sixense Entertainment, działający w oparciu o słabe pole magnetyczne. Według twórców osiąga dokładność pozycjonowania do 1mm i orientacji do 1 stopnia.
+}
+lub nawet Stem System -- rozwiązania podobnego do Razer Hydra, 
+jednak pozwalającego śledzić całe ciało z użyciem pięciu czujników.
+Użycie drugiego rozwiązania wyeliminowałoby także potrzebę korzystania z Kinecta i pozwoliłoby uniknąć jego ograniczeń.
+
+Ponadto problemy z Oculusem dotyczą tylko kart graficznych w laptopach.
+Z przeprowadzonych testów wynika, 
+że na komputerach stacjonarnych będzie możliwe wykorzystanie wirtualnej rzeczywistości w pełni.
+
+\section{Kierunki rozwoju} \label{sec:rozwoj}
+%Połączenie projektów
+Kolejnym krokiem będzie połączenie obu części projektu. 
+W związku z tym pojawią się dodatkowe trudności do rozwiązania.
+W walce gracza z wirtualnym szermierzem trzeba będzie uwzględnić "fizykę odwrotną", 
+czyli reakcję szabli na uderzenie w inny przedmiot. 
+W takim wypadku gracz będzie musiał wyobrazić sobie kolizję oraz opór z nią związany i zatrzymać ruch ręki 
+lub nawet cofnąć ją do poprawnej pozycji.
+
+%Kolizje, wyszczerbienia
+Będzie konieczne dokładniejsze rozpatrywanie kolizji między samymi szablami.
+Jeśli ostrze trafia w płaz\footnote{ płaz -- boczna część klingi} - ślizga się po nim. 
+Natomiast jeśli ostrze zderza się z drugim ostrzem, 
+działają dużo większe siły tarcia, 
+krawędzie często sczepiają się. 
+Poza tym w szablach powstają wyszczerbienia, 
+co prowadzi do kolejnego poziomu szczegółowości obliczeń fizycznych.
+
+Kolejnym pomysłem jest wykrywanie miejsca trafienia szablą. 
+Do obliczenia obrażeń trzeba określić rodzaj pancerza w miejscu trafienia. 
+Poza siłą i pancerzem należy uwzględnić szkody, jakie powoduje takie trafienie, 
+wzorując się na tablicy Fairbairn\textquotesingle ea\footnote{
+	Są w niej czasy zgonu lub stania się niezdolnym do walki po uszkodzeniu konkretnej części ciała.
+}.
+
+W planach rozwoju jest także dodanie innych rodzajów uzbrojenia. 
+Symulowanie walki mieczem i tarczą byłoby problematyczne przy obecnej konfiguracji, 
+ponieważ Kinect nie byłby w stanie określić pozycji ręki zasłoniętej przez tarczę. 
+Dodanie drugiego kontrolera Move nie stanowi problemu.
+
+%W końcu możliwe jest przekształcenie projektu w grę zręcznościową, odchodząc od koncepcji zwiększania realizmu przez integrację z prawdziwą bronią.\\
